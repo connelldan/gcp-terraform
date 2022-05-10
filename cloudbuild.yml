@@ -20,4 +20,4 @@ steps:
         - 'terraform.tfvars'
       id: terraform plan
     options:
-    logging: CLOUD_LOGGING_ONLY
+        logging: CLOUD_LOGGING_ONLY
