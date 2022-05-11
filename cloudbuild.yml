@@ -1,0 +1,18 @@
+steps:
+  - name: hashicorp/terraform
+    args:
+      - fmt
+      - '-no-color'
+      - '-check'
+    dir: manifests
+    id: 'terraform fmt'
+  - name: hashicorp/terraform
+    args:
+      - init
+    id: 'terraform init'
+  - name: hashicorp/terraform
+    args:
+      - plan
+    id: 'terraform plan'
+logsBucket: gs://connelld-cloud-build-logs
+timeout: 60s
