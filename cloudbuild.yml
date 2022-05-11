@@ -19,5 +19,5 @@ steps:
     - '-var-file'
     - 'terraform.tfvars'
   id: 'terraform plan'
-options:
-  logging: CLOUD_LOGGING_ONLY
+logsBucket: gs://connelld-cloud-build-logs
+timeout: 3600s
