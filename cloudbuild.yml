@@ -5,19 +5,19 @@ steps:
         - '-no-color'
         - '-check'
       dir: manifests
-      id: terraform fmt
+      id: 'terraform fmt'
     - name: hashicorp/terraform
       args:
         - init
         - '-no-color'
         - '-backend-config'
         - 'backend.tfvars'
-      id: terraform init
+      id: 'terraform init'
     - name: hashicorp/terraform
       args:
         - plan
         - '-var-file'
         - 'terraform.tfvars'
-      id: terraform plan
+      id: 'terraform plan'
     options:
         logging: CLOUD_LOGGING_ONLY
