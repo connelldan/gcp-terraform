@@ -1,6 +1,6 @@
 terraform {
   backend "gcs" {
-    bucket  = "terraform-state-connell"
+    bucket = "terraform-state-connell"
     # path  = "terraform.tfstate"
   }
 }
@@ -10,15 +10,15 @@ terraform {
 
   required_providers {
     google-beta = "= 3.50.0"
-}
+  }
 }
 provider "google" {
-  project     = var.gcp_project
-  region      = var.gcp_region
+  project = var.gcp_project
+  region  = var.gcp_region
 }
 
 provider "google-beta" {
-  project     = var.gcp_project
-  region      = var.gcp_region
+  project = var.gcp_project
+  region  = var.gcp_region
 }
 
